@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/img_photo"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@id/img_photo"
+        android:text="Judul Film"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tahun_produksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@id/txt_name"
+        android:text="(tahun)"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/lay1"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/img_photo"
+        android:layout_below="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:textStyle="bold|normal"
+            android:id="@+id/tvsutra"
+            android:text="Sutradara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:maxLines="2"
+            android:layout_toRightOf="@+id/tvsutra"
+            android:id="@+id/sutradara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sutradara"/>
+
+        <TextView
+            android:textStyle="bold|normal"
+            android:id="@+id/tvprod"
+            android:layout_below="@+id/tvsutra"
+            android:text="Produksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:maxLines="2"
+            android:layout_alignBaseline="@id/tvprod"
+            android:layout_alignStart="@id/sutradara"
+            android:layout_alignLeft="@id/sutradara"
+            android:layout_below="@id/tvsutra"
+            android:id="@+id/produksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produksi"
+            />
+
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvprod"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/lorem" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
